@@ -10,10 +10,19 @@ public class CreatingFiles {
 		System.out.println("Working Directory: " + cwd);
 
 		File tsetFile = new File("test.txt");
-		// Create the file
-		boolean fileCreated = tsetFile.createNewFile();
-		System.out.println(fileCreated);
+		rootDir();
 
+
+	}
+
+	private static void rootDir() {
+		
+		File[] roots = File.listRoots();
+		 System.out.println("List of root directories:");
+		 for(File f : roots){
+		 System.out.println(f.getPath());
+		 }
+		
 	}
 
 }
